@@ -1,0 +1,69 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Простий калькулятор</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator {
+            text-align: center;
+        }
+
+        #inputField,
+        #outputField {
+            padding: 8px;
+            margin: 5px;
+            width: 200px;
+        }
+
+        .buttons {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        progress {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Калькулятор прототип</h1>
+        <input type="text" id="inputField" placeholder="Введіть число">
+        <div class="buttons">
+            <button onclick="startCalculation()">Start</button>
+            <button onclick="cancelCalculation()">Cancel</button>
+        </div>
+        <progress id="progressBar" value="0" max="100"></progress>
+        <input type="text" id="outputField" placeholder="Результат" readonly>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
